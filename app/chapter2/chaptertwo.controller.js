@@ -1,4 +1,5 @@
 (function(){
+    'use strict';
     angular
         .module('app')
         .controller('ChapterTwoController',ChapterTwoController);
@@ -8,6 +9,15 @@
     {
         var vm = this;
         vm.chapterTitle = "Chapter 2";
+        vm.show = undefined;
+        vm.hideAndShow = hideAndShow;
+        vm.status = 'Show';
+        
+        function hideAndShow()
+        {
+            vm.show = !vm.show;
+            vm.status = (vm.status =='Show'?'Hide':'Show');
+        };
 
     }
 })();
