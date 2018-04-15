@@ -16,7 +16,7 @@
         function hideAndShow()
         {
             vm.show = !vm.show;
-            vm.status = (vm.status =='Show'?'Hide':'Show');
+            vm.status = (vm.show == true ? 'Hide' : 'Show');
         };
 
     }

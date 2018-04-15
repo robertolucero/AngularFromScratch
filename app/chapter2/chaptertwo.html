@@ -2,21 +2,23 @@
     <div class="jumbotron text-center">
         <h1>{{chapter2.chapterTitle}}</h1>
     </div>
-    
+
     <div class="container">
         <div class="row">
             <div class="col">
-              <h3>Hidde and Show</h3>
-              <button  class="btn btn-default" ng-click="chapter2.hideAndShow()">{{chapter2.status}}</button>
-              <span ng-show="chapter2.show">Hello!</span>
+                <h3>Hidde and Show</h3>
+                <button class="btn btn-default" ng-click="chapter2.hideAndShow()">{{chapter2.status}}</button>
+                <div class="row">
+                    <label ng-show="chapter2.show">Hello!</label>
+                </div>
             </div>
             <div class="col">
-              One of three columns
+                One of three columns
             </div>
             <div class="col">
-              One of three columns
+                One of three columns
             </div>
-         </div>    
+        </div>
     </div>
 
 </div>
