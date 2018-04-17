@@ -3,20 +3,30 @@
         <h1>{{chapter2.chapterTitle}}</h1>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <h3>Hidde and Show</h3>
-                <button class="btn btn-default" ng-click="chapter2.hideAndShow()">{{chapter2.status}}</button>
-                <div class="row">
-                    <label ng-show="chapter2.show">Hello!</label>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Hidde and Show</h5>
+                        <button class="btn btn-default" ng-click="chapter2.hideAndShow()">{{chapter2.status}}</button>
+                        <label class="card-text" ng-show="chapter2.show">Showing some text!</label>
+                    </div>
                 </div>
             </div>
             <div class="col">
-                One of three columns
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Column 2</h5>
+                    </div>
+                </div>
             </div>
             <div class="col">
-                One of three columns
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Column 3</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
