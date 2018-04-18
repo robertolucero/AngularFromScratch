@@ -1,0 +1,23 @@
+{
+  "name": "angularfromscratch",
+  "version": "1.0.0",
+  "description": "'testing environment'",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertolucero/AngularFromScratch.git"
+  },
+  "author": "'Roberto Lucero'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertolucero/AngularFromScratch/issues"
+  },
+  "homepage": "https://github.com/robertolucero/AngularFromScratch#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
