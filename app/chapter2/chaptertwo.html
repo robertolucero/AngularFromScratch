@@ -18,8 +18,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Classes and Styles</h5>
-
-                        
+                        <div ng-class="{error: chapter2.isError, warning: chapter2.isWarning}">{{chapter2.message}}</div>
+                        <button ng-click="chapter2.showError()">Simulate error</button>
+                        <button ng-click="chapter2.showWarning()">Simulate warning</button>
                     </div>
                 </div>
             </div>
