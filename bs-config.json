@@ -1,5 +1,9 @@
 {
-    "files" : "./app/**/*.{js, html, css}",
-    "server" : { "baseDir" : "./app" },
-    "https" : true
+    "port":8080,
+    "files" : [
+        "./app/**/*.js",
+        "./app/**/*.html",
+        "./app/**/*.css"        
+    ],
+    "server" : { "baseDir" : "./app" }
 }
