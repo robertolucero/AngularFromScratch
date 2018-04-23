@@ -4,3 +4,6 @@
 .warning {
   background-color: yellow;
 }
+.selected {
+  background-color: lightgreen;
+  }

@@ -17,7 +17,13 @@
         vm.showError = showError;
         vm.showWarning = showWarning;
         vm.message = '';
-
+        vm.restaurants = [
+            {name:"The Handsome Heifer", cuisine:"BBQ"},
+            {name:"Green's Green Greens", cuisine:"Salads"},
+            {name:"House of Fine Fish", cuisine:"Seafood"}
+        ];
+        vm.selectRestaurant = selectRestaurant;
+        vm.selectedRestaurant = -1;
 
         function hideAndShow()
         {
@@ -29,15 +35,19 @@
         {
             vm.message = "This is an error.";
             vm.isError = true;
-            vm.isWarning = !v.isError;
+            vm.isWarning = !vm.isError;
         }
-
         
         function showWarning()
         {
             vm.message = "This is a warning.";
             vm.isWarning = true;
-            vm.isError = !v.isWarning;
+            vm.isError = !vm.isWarning;
+        }
+
+        function selectRestaurant(index)
+        {
+            vm.selectedRestaurant = index; 
         }
     }
 })();
