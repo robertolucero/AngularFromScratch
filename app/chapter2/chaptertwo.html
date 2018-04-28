@@ -39,23 +39,54 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                            <h5 class="card-title">Watchers</h5>
-                            <section>
-                                <h6 class="card-title">Shopping cart</h6>
-                                <div ng-repeat="item in chapter2.items">
-                                    <span>{{item.title}}</span>
-                                    <input ng-model="item.quantity">
-                                    <span>{{item.price | currency}}</span>
-                                    <span>{{item.price * item.quantity | currency}}</span>
-                                </div>
-                                <div>Total: {{chapter2.totalCart() | currency}}</div>
-                                <div>Discount: {{chapter2.bill.discount | currency}}</div>
-                                <div>Total: {{chapter2.subtotal() | currency}}</div>
-                            </section>
-                        </div>
+                        <h5 class="card-title">Watchers</h5>
+                        <section>
+                            <h6 class="card-title">Shopping cart</h6>
+                            <div ng-repeat="item in chapter2.items">
+                                <span>{{item.title}}</span>
+                                <input ng-model="item.quantity">
+                                <span>{{item.price | currency}}</span>
+                                <span>{{item.price * item.quantity | currency}}</span>
+                            </div>
+                            <div>Total: {{chapter2.totalCart() | currency}}</div>
+                            <div>Discount: {{chapter2.bill.discount | currency}}</div>
+                            <div>Total: {{chapter2.subtotal() | currency}}</div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h5 class="card-title">Custom Filter</h5>
+                    <section>
+                        <label for="unspacedText">Write text without capital</label>
+                        <input id="unspacedText" type="text" ng-model="chapter2.textWithoutCapital">
+                    </section>
+                    <section>
+                        <span>{{chapter2.textWithoutCapital | toTitleCase }}</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 5</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card 6</h5>
+                    <section>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </div>

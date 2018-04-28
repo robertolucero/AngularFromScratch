@@ -24,16 +24,15 @@
     vm.selectedRestaurant = -1;
     vm.bill = {};
     vm.items = [
-        { title: "Pain pots", quantity: 8, price: 3 },
-        { title: "Polka dots", quantity: 17, price: 14 },
-        { title: "Pebbles", quantity: 5, price: 7 }
+      { title: "Pain pots", quantity: 8, price: 3 },
+      { title: "Polka dots", quantity: 17, price: 14 },
+      { title: "Pebbles", quantity: 5, price: 7 }
     ];
     vm.totalCart = totalCart;
     vm.subtotal = subtotal;
+    vm.textWithoutCapital = 'test it';
 
-    $scope.$watch(vm.totalCart,calculateDiscount);
-
-
+    $scope.$watch(vm.totalCart, calculateDiscount);
 
     function hideAndShow() {
       vm.show = !vm.show;
@@ -56,23 +55,23 @@
       vm.selectedRestaurant = index;
     }
 
-    function totalCart(){
-        var total = 0;
-        var len = vm.items.length;
+    function totalCart() {
+      var total = 0;
+      var len = vm.items.length;
 
-        for (var i = 0; i < len; i++){
-            total += vm.items[i].price * vm.items[i].quantity; 
-        }
+      for (var i = 0; i < len; i++) {
+        total += vm.items[i].price * vm.items[i].quantity;
+      }
 
-        return total;
+      return total;
     }
 
-    function subtotal(){
-        return  vm.totalCart() - vm.bill.discount;
+    function subtotal() {
+      return vm.totalCart() - vm.bill.discount;
     }
 
-    function calculateDiscount(newValue, oldValue, scope){
-        vm.bill.discount = newValue > 100 ? 10 : 0;
+    function calculateDiscount(newValue, oldValue, scope) {
+      vm.bill.discount = newValue > 100 ? 10 : 0;
     }
   }
 })();
