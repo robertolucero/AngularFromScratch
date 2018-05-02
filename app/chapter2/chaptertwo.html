@@ -69,20 +69,36 @@
                     </section>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 5</h5>
+            <div class="col" ng-controller="LoginController as login">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Login form</h5>
+                        <section>
+                            <form name="loginForm">
+                                <div>First Name:
+                                    <input type="text" ng-model="login.firstName" required> </div>
+                                <div>Last Name:
+                                    <input type="text" ng-model="login.lastName" required> </div>
+                                <div>Email:
+                                    <input type="email" ng-model="login.eMail" required> </div>
+                                <div>
+                                    <button ng-disabled="!loginForm.$valid" type="submit" ng-click="login.loginUser()">Submit</button>
+                                </div>
+                            </form>
+                        </section>
+                        <section>
+                            <div ng-show="loginForm.$valid && login.loginMessage">{{login.loginMessage}}</div>
+                        </section>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 6</h5>
-                    <section>
-                    </section>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 6</h5>
+                        <section>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
