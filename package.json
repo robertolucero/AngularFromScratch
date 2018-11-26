@@ -19,5 +19,8 @@
   "homepage": "https://github.com/robertolucero/AngularFromScratch#readme",
   "devDependencies": {
     "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "eslint": "^5.9.0"
   }
 }
